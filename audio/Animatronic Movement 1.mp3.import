@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://8v0bpmfcf5hb"
+path="res://.godot/imported/Animatronic Movement 1.mp3-0f3d45f6b807fb0cdff9240362750732.mp3str"
+
+[deps]
+
+source_file="res://audio/Animatronic Movement 1.mp3"
+dest_files=["res://.godot/imported/Animatronic Movement 1.mp3-0f3d45f6b807fb0cdff9240362750732.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

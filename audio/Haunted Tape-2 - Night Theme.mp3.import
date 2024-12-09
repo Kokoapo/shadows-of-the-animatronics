@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c1ojo1404l67h"
+path="res://.godot/imported/Haunted Tape-2 - Night Theme.mp3-dabfb512e6903e0d4db3e5395563b325.mp3str"
+
+[deps]
+
+source_file="res://audio/Haunted Tape-2 - Night Theme.mp3"
+dest_files=["res://.godot/imported/Haunted Tape-2 - Night Theme.mp3-dabfb512e6903e0d4db3e5395563b325.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

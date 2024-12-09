@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://2r6otgmkap7h"]
+
+[ext_resource type="Script" path="res://scripts/security.gd" id="1_lq6h3"]
+[ext_resource type="Texture2D" uid="uid://uoow0mmpr0mn" path="res://sprites/Security.png" id="2_na40e"]
+[ext_resource type="Texture2D" uid="uid://c2ti47k83qrhr" path="res://sprites/Camera.png" id="2_ubqtq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lmpj0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xljqo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h52px"]
+
+[node name="Security" type="Node2D" node_paths=PackedStringArray("decision_timer")]
+script = ExtResource("1_lq6h3")
+decision_timer = NodePath("Timer")
+entries = [8, 10]
+secrets = [3, 7, 27]
+office_index = 29
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0765, 0.0765)
+texture = ExtResource("2_na40e")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="Camera1" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera1"]
+shape = SubResource("RectangleShape2D_lmpj0")
+debug_color = Color(0, 0.639216, 0.388235, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera1"]
+scale = Vector2(0.0129399, 0.0129399)
+texture = ExtResource("2_ubqtq")
+
+[node name="Camera2" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2"]
+shape = SubResource("RectangleShape2D_xljqo")
+debug_color = Color(0, 0.541176, 0.956863, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2"]
+scale = Vector2(0.0129917, 0.0129917)
+texture = ExtResource("2_ubqtq")
+
+[node name="Camera3" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera3"]
+shape = SubResource("RectangleShape2D_h52px")
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera3"]
+scale = Vector2(0.0129053, 0.0129053)
+texture = ExtResource("2_ubqtq")

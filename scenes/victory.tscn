@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://btghon7aqjfd4"]
+
+[ext_resource type="Texture2D" uid="uid://dxrojsce3xp76" path="res://sprites/Victory.jpeg" id="1_ubiil"]
+[ext_resource type="AudioStream" uid="uid://71a8c85nm3kn" path="res://audio/Victory.mp3" id="2_6ltvf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 914.0
+scale = Vector2(0.719741, 0.71019)
+texture = ExtResource("1_ubiil")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_6ltvf")
+autoplay = true

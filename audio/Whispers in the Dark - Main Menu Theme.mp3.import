@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://mkeqdbp5ujvm"
+path="res://.godot/imported/Whispers in the Dark - Main Menu Theme.mp3-83da756fed590956630bee869319fa80.mp3str"
+
+[deps]
+
+source_file="res://audio/Whispers in the Dark - Main Menu Theme.mp3"
+dest_files=["res://.godot/imported/Whispers in the Dark - Main Menu Theme.mp3-83da756fed590956630bee869319fa80.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

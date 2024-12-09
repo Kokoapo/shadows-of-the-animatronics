@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0hfr5kal628d"]
+
+[ext_resource type="Texture2D" uid="uid://c5hujp84t6qx7" path="res://sprites/pizzeria.jpg" id="1_i3pa6"]
+[ext_resource type="Script" path="res://scripts/night.gd" id="1_nqmyo"]
+[ext_resource type="Texture2D" uid="uid://lpyign57yr40" path="res://sprites/frederico.jpeg" id="3_om3qs"]
+[ext_resource type="PackedScene" uid="uid://261wy5615xo3" path="res://scenes/animatronic.tscn" id="4_6fl5u"]
+[ext_resource type="Resource" uid="uid://c0ktdeeqfi226" path="res://resources/frederico.tres" id="5_6457a"]
+
+[node name="Night" type="Node2D"]
+script = ExtResource("1_nqmyo")
+rooms_graph = [[0, 1], [1, 0]]
+
+[node name="MapSprite" type="Sprite2D" parent="."]
+position = Vector2(349.547, 324.25)
+scale = Vector2(1.04159, 1.041)
+texture = ExtResource("1_i3pa6")
+
+[node name="Rooms" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ClassicShowStage" type="Button" parent="Rooms"]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 113.0
+offset_right = 295.0
+offset_bottom = 121.0
+scale = Vector2(21.7403, 4.6928)
+
+[node name="DiningArea" type="Button" parent="Rooms"]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 154.0
+offset_right = 262.0
+offset_bottom = 162.0
+scale = Vector2(36.2917, 15.4922)
+
+[node name="Icons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 763.0
+offset_top = 6.0
+offset_right = 803.0
+offset_bottom = 46.0
+scale = Vector2(4.20146, 4.20146)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Icons"]
+layout_mode = 0
+offset_top = 7.61641
+offset_right = 40.0
+offset_bottom = 47.6164
+alignment = 1
+
+[node name="TextureButton1" type="TextureButton" parent="Icons/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("3_om3qs")
+texture_pressed = ExtResource("3_om3qs")
+texture_hover = ExtResource("3_om3qs")
+texture_disabled = ExtResource("3_om3qs")
+texture_focused = ExtResource("3_om3qs")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Animatronics" type="Node" parent="."]
+
+[node name="Frederico" parent="Animatronics" instance=ExtResource("4_6fl5u")]
+animatronic_data = ExtResource("5_6457a")

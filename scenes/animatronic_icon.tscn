@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://can50os8g1v82"]
+
+[ext_resource type="Script" path="res://scripts/animatronic_icon.gd" id="1_5jvmx"]
+[ext_resource type="Theme" uid="uid://dnu7ch56lmkis" path="res://themes/icons.tres" id="2_sxj30"]
+
+[node name="HBoxContainer" type="HBoxContainer" node_paths=PackedStringArray("texture_button", "progress_bar", "timer")]
+offset_right = 8.0
+offset_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+script = ExtResource("1_5jvmx")
+texture_button = NodePath("TextureButton1")
+progress_bar = NodePath("ProgressBar")
+timer = NodePath("Timer")
+
+[node name="TextureButton1" type="TextureButton" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.0
+theme = ExtResource("2_sxj30")
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

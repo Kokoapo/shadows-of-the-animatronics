@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AnimatronicData" load_steps=4 format=3 uid="uid://c0ktdeeqfi226"]
+
+[ext_resource type="Texture2D" uid="uid://dbd7326dio6mr" path="res://sprites/FredericoNormal.jpeg" id="1_2mex0"]
+[ext_resource type="Texture2D" uid="uid://che8cu8x2d2hm" path="res://sprites/FredericoHover.jpeg" id="2_82c47"]
+[ext_resource type="Script" path="res://scripts/animatronics/animatronic_data.gd" id="3_cuwya"]
+
+[resource]
+script = ExtResource("3_cuwya")
+character_sprite = ExtResource("1_2mex0")
+icon_normal = ExtResource("1_2mex0")
+icon_hover = ExtResource("2_82c47")
+position_offset = Vector2(10, 0)
+room = 0
+spawn_room = 0

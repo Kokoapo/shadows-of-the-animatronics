@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://idcnevm2a2bo"]
+
+[ext_resource type="Texture2D" uid="uid://dcyvxkfsxob1i" path="res://sprites/Defeat.jpeg" id="1_78y8k"]
+[ext_resource type="AudioStream" uid="uid://dhyiojacbly4p" path="res://audio/Defeat.mp3" id="2_r511k"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 914.0
+scale = Vector2(0.719746, 0.708658)
+texture = ExtResource("1_78y8k")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+scale = Vector2(0.719746, 0.708658)
+stream = ExtResource("2_r511k")
+autoplay = true

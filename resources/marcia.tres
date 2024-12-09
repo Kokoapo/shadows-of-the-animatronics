@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AnimatronicData" load_steps=4 format=3 uid="uid://d3yjkgjh6dbyj"]
+
+[ext_resource type="Script" path="res://scripts/animatronics/animatronic_data.gd" id="1_2snkh"]
+[ext_resource type="Texture2D" uid="uid://dhptjw5ls8kbn" path="res://sprites/MarciaNormal.jpeg" id="1_m4pq1"]
+[ext_resource type="Texture2D" uid="uid://kcqw4wymbsmw" path="res://sprites/MarciaHover.jpeg" id="2_hp30o"]
+
+[resource]
+script = ExtResource("1_2snkh")
+character_sprite = ExtResource("1_m4pq1")
+icon_normal = ExtResource("1_m4pq1")
+icon_hover = ExtResource("2_hp30o")
+position_offset = Vector2(-10, 0)
+room = 28
+spawn_room = 28

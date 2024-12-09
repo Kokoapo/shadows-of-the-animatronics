@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://261wy5615xo3"]
+
+[ext_resource type="Script" path="res://scripts/animatronics/animatronic.gd" id="1_v6rfm"]
+[ext_resource type="AudioStream" uid="uid://8v0bpmfcf5hb" path="res://audio/Animatronic Movement 1.mp3" id="2_h2og2"]
+[ext_resource type="AudioStream" uid="uid://cfn5ayctv6xog" path="res://audio/Animatronic Movement 2.mp3" id="3_m5juc"]
+[ext_resource type="AudioStream" uid="uid://bji1ma1ai0wxc" path="res://audio/Animatronic Movement 3.mp3" id="4_3c2iw"]
+[ext_resource type="AudioStream" uid="uid://fwsqtvt38227" path="res://audio/Animatronic Stun.mp3" id="5_3mmdw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dohw0"]
+
+[node name="Animatronic" type="CharacterBody2D" node_paths=PackedStringArray("collision_shape_2d", "move_timer", "stun_timer", "sprite_2d", "stun_audio_stream_player", "walk_audio_stream_player")]
+collision_layer = 6
+collision_mask = 7
+script = ExtResource("1_v6rfm")
+collision_shape_2d = NodePath("CollisionShape2D")
+move_timer = NodePath("MoveTimer")
+stun_timer = NodePath("StunTimer")
+sprite_2d = NodePath("Sprite2D")
+texture_size_limit = Vector2(32, 32)
+stun_audio_stream_player = NodePath("StunAudioStreamPlayer2D")
+walk_audio_stream_player = NodePath("WalkAudioStreamPlayer2D")
+walk_audios = [ExtResource("2_h2og2"), ExtResource("3_m5juc"), ExtResource("4_3c2iw")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dohw0")
+
+[node name="MoveTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="StunTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="WalkAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="StunAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_3mmdw")
